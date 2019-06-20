@@ -1,0 +1,4 @@
+UserKey,Username,Password,AccountNum,SiteRefNum,Lastname,NewPassword,GroupAccountNum,SiteRefNumElectricity,BasketIds
+CsaUser,cs@portal.com,Testing321,10010731,4375241,,Testing456,10000003,PN004465,
+AdminUser,Uma.Perumal@gazprom-energy.com,Testing321,10010731,4375241,,Testing456,10000007,PN005160,
+EndUser,Alludin.Sawar@gazprom-energy.com,Testing321,10001273,4727502,Sarwar,Testing456,10000003,PN004465,

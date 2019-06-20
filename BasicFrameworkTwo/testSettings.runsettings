@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+	<TestRunParameters>
+		<Parameter name="EnvironmentKey" value="POR QA 01" />
+		<Parameter name="Browser" value="Chrome" />
+		<Parameter name="WebRoot" value="http://porapp01qa/" />
+		<Parameter name="ApiRoot" value="http://porapp01qa:81/api/" />
+		<Parameter name="EnableChrome" value="true" />
+		<Parameter name="EnableIe" value="false" />
+		<Parameter name="Server" value="PORSQS01DV"/>
+		<Parameter name="DbInstance" value="POR_QA"/>
+		<Parameter name="DatabaseName" value="Portal"/>
+	</TestRunParameters>
+</RunSettings>
