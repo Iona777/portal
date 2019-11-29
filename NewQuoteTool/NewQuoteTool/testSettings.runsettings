@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<RunSettings>
+	<TestRunParameters>
+		<Parameter name="EnvironmentKey" value="POR PP 01" />
+		<Parameter name="WebRoot" value="https://www.pp.gazprom-energy.co.uk/" />
+		<Parameter name="Browser" value="Chrome"/>
+		<Parameter name="DefaultTimeoutSeconds" value ="10"/>
+		<Parameter name="EnableChrome" value="true" />
+		<Parameter name="EnableIe" value="false" />
+	</TestRunParameters>
+</RunSettings>
