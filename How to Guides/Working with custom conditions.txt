@@ -1,0 +1,51 @@
+private bool AccountSelected(string account)
+        {
+            return DoesElementExist(AccountSelection, x => x.Text.StartsWith(account), 5);
+        }
+
+
+
+protected bool DoesElementExist(By by, Func<IWebElement, bool> condition, int? waitSeconds = null)
+        {
+            try
+            {
+                GetElement(by, condition, waitSeconds);
+            }
+
+
+
+Func<IWebElement, bool> condition
+//This is a fuction called 'condition' tat take in a Webelement and returns a boolean
+//The inner workings of the fuction are defined when it is passed in to be:
+// x => x.Text.StartsWith(account)
+
+
+protected IWebElement GetElement(By by, Func<IWebElement, bool> condition, int? wait = null)
+        {
+            return wait != null ? WaitForWithCondition(@by, condition, wait.Value) : Driver.FindElement(@by);
+        }
+
+
+protected IWebElement WaitForWithCondition(By by, Func<IWebElement, bool> condition, int seconds = 20, bool retry = true, bool waitForVisibility = false)
+        {
+            try
+            {
+                var wait = new WebDriverWait(Driver, new TimeSpan(0, 0, seconds));
+                Func<IWebDriver, IWebElement> waitForElement = x =>
+                    {
+                        var elements = WaitFor(by, seconds, retry, waitForVisibility);
+                        var element = elements.FirstOrDefault(e => e != null && condition(e) && e.Displayed);
+                        return element;
+                    };
+                return wait.Until(waitForElement);
+            }
+
+//This is ANOTHER function called waitForElement. It takes in a webelement and returns a webelement
+
+
+Func<IWebDriver, IWebElement> waitForElement = x =>
+                    {
+                        var elements = WaitFor(by, seconds, retry, waitForVisibility);
+                        var element = elements.FirstOrDefault(e => e != null && condition(e) && e.Displayed);
+                        return element;
+                    };

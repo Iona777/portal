@@ -1,0 +1,41 @@
+account="10069765"
+
+
+
+interface IMyInterface
+        {
+            void Hello();
+        }
+
+        public class SayStuff : IMyInterface
+        {
+            public void Hello()
+            {
+                Console.WriteLine("Hello");
+            }
+        }
+
+        public class MyFactory
+        {
+            public SayStuff CreateSayStuffInstance()
+            {
+                return new SayStuff();
+            }
+        }
+
+        public class A
+        {
+            public A()
+            {
+                MyFactory _factory = new MyFactory();
+                SayStuff stuff1 = _factory.CreateSayStuffInstance();
+                SayStuff stuff2 = _factory.CreateSayStuffInstance();
+            }
+            
+        }
+
+
+http://localhost:60212/api/Account/Username
+
+
+C:\Users\gmacdona\AppData\Local\Postman\app-6.6.1

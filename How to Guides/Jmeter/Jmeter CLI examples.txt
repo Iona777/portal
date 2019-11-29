@@ -1,0 +1,15 @@
+
+jmeter -g  –o LogFolder/
+
+
+
+Creating HTML reports from existing log files
+----------------------------------------------
+
+jmeter -g log3.csv -o LogFolder/ --this works
+
+jmeter -g "C:\Program Files\apache-jmeter-5.1.1\bin\Reports\ManyInvoicesLog.csv" -o LogFolder2/ --this works. Note that path with spaces needs to be in quotes
+
+jmeter -g ".\Reports\ManyInvoicesLog.csv" -o LogFolder3/ -- this works 
+
+jmeter -g ".\Reports\ManyInvoicesLog.csv" -o ".\Reports\Performance Test HTML Report/" --this works. Note that path with spaces needs to be in quotes
